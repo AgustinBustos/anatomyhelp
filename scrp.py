@@ -79,6 +79,7 @@ def on_select(event):
         if selected_item=='apple':
             message_label.config(text="Correct", fg="green") 
             message_label.after(2000, lambda: message_label.config(text=""))  # Hide after 2 seconds
+            webbrowser.open('https://youtube.com', new = 0)    
         else:
             message_label.config(text="Incorrect", fg="red")
             message_label.after(2000, lambda: message_label.config(text=""))  # Hide after 2 seconds
