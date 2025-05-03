@@ -10,12 +10,29 @@ import threading
 
 import pandas as pd
 import screen_brightness_control as sbc
-print(sbc.get_brightness())
+# print(sbc.get_brightness())
 
 time.sleep(2)
 sbc.set_brightness(100)
 super_number=0.4
-df=pd.read_csv('./data.csv')
+
+import os
+import sys
+def resource_path(relative_path):
+    try:
+        base_path = sys._MEIPASS  # Temp folder used by PyInstaller
+    except AttributeError:
+        base_path = os.path.abspath(".")
+    return os.path.join(base_path, relative_path)
+csv_path = resource_path("data.csv")
+df = pd.read_csv(csv_path)
+# df=pd.read_csv('./data.csv')
+print('Press Scape!')
+
+
+
+
+
 random_row=df.loc[random.randint(0,len(df)-1)]
 items=df['nombrePrep'].tolist()
 global_thing=[]
