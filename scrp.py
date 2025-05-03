@@ -6,9 +6,14 @@ import random
 from unidecode import unidecode
 import webbrowser
 import time
+import threading
 
 import pandas as pd
+import screen_brightness_control as sbc
+print(sbc.get_brightness())
 
+time.sleep(2)
+sbc.set_brightness(100)
 super_number=0.4
 df=pd.read_csv('./data.csv')
 random_row=df.loc[random.randint(0,len(df)-1)]
@@ -35,16 +40,19 @@ def exit_app(event=None):
     root.destroy()
 
 root = tk.Tk()
-
-def show_black_overlay(duration=2000):  # duration in milliseconds
-    overlay = tk.Toplevel()
-    overlay.attributes('-fullscreen', True)
-    overlay.attributes('-topmost', True)
-    overlay.configure(bg='black')
-    overlay.overrideredirect(True)  # Removes window border
-
-    # Automatically close after duration
-    overlay.after(duration, overlay.destroy)
+def show_black_overlay(duration=3000):
+    def overlay_thread():
+        overlay = tk.Toplevel()
+        overlay.attributes('-fullscreen', True)
+        overlay.attributes('-topmost', True)
+        overlay.configure(bg='black')
+        overlay.overrideredirect(True)
+        
+        # Close after delay
+        overlay.after(duration, overlay.destroy)
+        overlay.mainloop()
+    
+    threading.Thread(target=overlay_thread, daemon=True).start()
 # root.attributes('-fullscreen', True)
 root.attributes('-topmost', True)
 root.attributes('-alpha', 1)
@@ -99,10 +107,11 @@ def on_select(event):
         selected_item = listbox.get(selected_indices[0])
         print(f"Selected item: {selected_item}")
         if selected_item==random_row['nombrePrep']:
+
             message_label.config(text="Correct", fg="green") 
             message_label.after(2000, lambda: message_label.config(text=""))  # Hide after 2 seconds
-
-
+            # show_black_overlay(5000)
+            sbc.set_brightness(0)
             random_row=df.loc[random.randint(0,len(df)-1)]
             print('Random Row')
             print(random_row)
@@ -110,9 +119,13 @@ def on_select(event):
 
             time.sleep(2)
             pyautogui.moveTo((((1-super_number)/2)+random.random()*super_number)*root.winfo_screenwidth(), (((1-super_number)/2)+random.random()*super_number)*root.winfo_screenheight())
-            for i in range(random.randint(0,4)):
-                time.sleep(0.5)
+            time.sleep(1)
+            pyautogui.click()
+            for i in range(random.randint(3,5)):
+                time.sleep(1)
+                pyautogui.moveTo(root.winfo_screenwidth()/2,root.winfo_screenheight()/2)
                 pyautogui.click()
+            sbc.set_brightness(100)
         else:
             message_label.config(text="Incorrect", fg="red")
             message_label.after(2000, lambda: message_label.config(text=""))  # Hide after 2 seconds
@@ -130,15 +143,17 @@ listbox.pack()
 message_label.pack()
 canvas.pack()
 webbrowser.open(random_row['link'])
-show_black_overlay(3000)
+# show_black_overlay(5000)
 time.sleep(2)
+sbc.set_brightness(0)
 pyautogui.moveTo((((1-super_number)/2)+random.random()*super_number)*root.winfo_screenwidth(), (((1-super_number)/2)+random.random()*super_number)*root.winfo_screenheight())
-
-
-for i in range(random.randint(0,4)):
-    time.sleep(0.5)
+time.sleep(0.5)
+pyautogui.click()
+for i in range(random.randint(2,4)):
+    time.sleep(0.7)
+    pyautogui.moveTo(root.winfo_screenwidth()/2,root.winfo_screenheight()/2)
     pyautogui.click()
-
+sbc.set_brightness(100)
 
 root.mainloop()
 
