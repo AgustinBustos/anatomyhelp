@@ -125,6 +125,7 @@ def on_select(event):
                 time.sleep(1)
                 pyautogui.moveTo(root.winfo_screenwidth()/2,root.winfo_screenheight()/2)
                 pyautogui.click()
+            time.sleep(1)
             sbc.set_brightness(100)
         else:
             message_label.config(text="Incorrect", fg="red")
@@ -142,10 +143,11 @@ message_label = tk.Label(frame, text="", font=("Arial", 16))
 listbox.pack()
 message_label.pack()
 canvas.pack()
+sbc.set_brightness(0)
 webbrowser.open(random_row['link'])
 # show_black_overlay(5000)
 time.sleep(2)
-sbc.set_brightness(0)
+
 pyautogui.moveTo((((1-super_number)/2)+random.random()*super_number)*root.winfo_screenwidth(), (((1-super_number)/2)+random.random()*super_number)*root.winfo_screenheight())
 time.sleep(0.5)
 pyautogui.click()
@@ -153,6 +155,7 @@ for i in range(random.randint(2,4)):
     time.sleep(0.7)
     pyautogui.moveTo(root.winfo_screenwidth()/2,root.winfo_screenheight()/2)
     pyautogui.click()
+time.sleep(1)
 sbc.set_brightness(100)
 
 root.mainloop()
