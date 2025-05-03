@@ -1,0 +1,82 @@
+,link,nombrePrep,descPrep,temaPrep
+0,http://www.histomap.ar/histoteca/Adrenal_HE.htm,Adrenal (glándula suprarrenal),Hematoxilina y Eosina,Sistema endocrino
+1,http://www.histomap.ar/histoteca/Adrenal_HE_2.htm,Adrenal (glándula suprarrenal),Hematoxilina y Eosina,Sistema endocrino
+2,http://www.histomap.ar/histoteca/Amigdala_HE.htm,Amígdala palatina,Hematoxilina y Eosina,Sistema inmune
+3,http://www.histomap.ar/histoteca/Aorta_Cava_HE.htm,Aorta y vena cava,Hematoxilina y Eosina,Sistema cardiovascular
+4,http://www.histomap.ar/histoteca/Bazo_HE.htm,Bazo,Hematoxilina y Eosina,Sistema inmune
+5,http://www.histomap.ar/histoteca/Bazo_HE_2.htm,Bazo,Hematoxilina y Eosina,Sistema inmune
+6,http://www.histomap.ar/histoteca/Cerebelo_Cajal.htm,Cerebelo,Técnica de Cajal,Sistema nervioso
+7,http://www.histomap.ar/histoteca/Cerebelo_HE.htm,Cerebelo,Hematoxilina y Eosina,Sistema nervioso
+8,http://www.histomap.ar/histoteca/Cerebelo_con_TE_HE.htm,Cerebelo y tronco encefálico,Hematoxilina y Eosina,Sistema nervioso
+9,http://www.histomap.ar/histoteca/Cerebro_Cajal.htm,Cerebro,Técnica de Cajal,Sistema nervioso
+10,http://www.histomap.ar/histoteca/Cerebro_Cajal_2.htm,Cerebro,Técnica de Cajal,Sistema nervioso
+11,http://www.histomap.ar/histoteca/Conducto_deferente_HE.htm,Conducto deferente,Hematoxilina y Eosina,Sistema genital masculino
+12,http://www.histomap.ar/histoteca/Corazon_HE.htm,Corazón,Hematoxilina y Eosina,Sistema cardiovascular
+13,http://www.histomap.ar/histoteca/Cordon_umbilical_HE.htm,Cordón umbilical,Hematoxilina y Eosina,"Embrión, placenta y anexos"
+14,http://www.histomap.ar/histoteca/Cuello_uterino_HE.htm,Cuello uterino,Hematoxilina y Eosina,Sistema genital femenino
+15,http://www.histomap.ar/histoteca/Citologia_exfoliativa_PAP.htm,Cuello uterino (citología exfoliativa),Papanicolau,Sistema genital femenino
+16,http://www.histomap.ar/histoteca/Epididimo_HE.htm,Epidídimo,Hematoxilina y Eosina,Sistema genital masculino
+17,http://www.histomap.ar/histoteca/Esofago_HE.htm,Esófago,Hematoxilina y Eosina,Sistema digestivo
+18,http://www.histomap.ar/histoteca/Esofago_HE_2.htm,Esófago,Hematoxilina y Eosina,Sistema digestivo
+19,http://www.histomap.ar/histoteca/Estomago_HE.htm,Estómago,Hematoxilina y Eosina,Sistema digestivo
+20,http://www.histomap.ar/histoteca/Ganglio_linfatico_HE.htm,Ganglio linfático,Hematoxilina y Eosina,Sistema inmune
+21,http://www.histomap.ar/histoteca/Glandula_mamaria_embarazo_HE.htm,Glándula mamaria (en embarazo),Hematoxilina y Eosina,Piel y faneras
+22,http://www.histomap.ar/histoteca/Glandula_mamaria_embarazo_HE_2.htm,Glándula mamaria (en embarazo),Hematoxilina y Eosina,Piel y faneras
+23,http://www.histomap.ar/histoteca/Glandula_mamaria_lactancia_HE.htm,Glándula mamaria (en lactancia),Hematoxilina y Eosina,Piel y faneras
+24,http://www.histomap.ar/histoteca/Glandula_mamaria_reposo_HE.htm,Glándula mamaria (en reposo),Hematoxilina y Eosina,Piel y faneras
+25,http://www.histomap.ar/histoteca/Sublingual_HE.htm,Glándula sublingual,Hematoxilina y Eosina,Sistema digestivo
+26,http://www.histomap.ar/histoteca/Submaxilar_HE.htm,Glándula submandibular (submaxilar),Hematoxilina y Eosina,Sistema digestivo
+27,http://www.histomap.ar/histoteca/Higado_HE.htm,Hígado,Hematoxilina y Eosina,Sistema digestivo
+28,http://www.histomap.ar/histoteca/Higado_HE_2.htm,Hígado,Hematoxilina y Eosina,Sistema digestivo
+29,http://www.histomap.ar/histoteca/Hipofisis_Tricromico.htm,Hipófisis,Tricrómico,Sistema endocrino
+30,http://www.histomap.ar/histoteca/Hipofisis_Tetracromico_de_Herlant.htm,Hipófisis,Tetracrómico de Herlant,Sistema endocrino
+31,http://www.histomap.ar/histoteca/Apendice_HE.htm,Intestino grueso (apéndice),Hematoxilina y Eosina,Sistema digestivo
+32,http://www.histomap.ar/histoteca/Colon_HE.htm,Intestino grueso (colon),Hematoxilina y Eosina,Sistema digestivo
+33,http://www.histomap.ar/histoteca/Colon_HE_2.htm,Intestino grueso (colon),Hematoxilina y Eosina,Sistema digestivo
+34,http://www.histomap.ar/histoteca/Duodeno_HE.htm,Intestino delgado (duodeno),Hematoxilina y Eosina,Sistema digestivo
+35,http://www.histomap.ar/histoteca/Ileon_HE.htm,Intestino delgado (íleon),Hematoxilina y Eosina,Sistema digestivo
+36,http://www.histomap.ar/histoteca/Yeyuno_HE.htm,Intestino delgado (yeyuno),Hematoxilina y Eosina,Sistema digestivo
+37,http://www.histomap.ar/histoteca/Lengua_HE.htm,Lengua,Hematoxilina y Eosina,Sistema digestivo
+38,http://www.histomap.ar/histoteca/Medula_espinal_Cajal.htm,Médula espinal,Técnica de Cajal,Sistema nervioso
+39,http://www.histomap.ar/histoteca/Medula_espinal_HE.htm,Médula espinal,Hematoxilina y Eosina,Sistema nervioso
+40,http://www.histomap.ar/histoteca/Medula_osea_HE.htm,Médula ósea,Hematoxilina y Eosina,Sangre y médula ósea
+41,http://www.histomap.ar/histoteca/Oido_interno_HE.htm,Oído interno,Hematoxilina y Eosina,Órganos de los sentidos
+42,http://www.histomap.ar/histoteca/Ojo_anterior_HE.htm,Ojo (segmento anterior),Hematoxilina y Eosina,Órganos de los sentidos
+43,http://www.histomap.ar/histoteca/Ojo_anterior_HE_2.htm,Ojo (segmento anterior),Hematoxilina y Eosina,Órganos de los sentidos
+44,http://www.histomap.ar/histoteca/Ojo_posterior_HE.htm,Ojo (segmento posterior),Hematoxilina y Eosina,Órganos de los sentidos
+45,http://www.histomap.ar/histoteca/Osificacion_endocondral_HE.htm,Osificación endocondral,Hematoxilina y Eosina,Sistema osteomuscular
+46,http://www.histomap.ar/histoteca/Osificacion_endocondral_HE_2.htm,Osificación endocondral,Hematoxilina y Eosina,Sistema osteomuscular
+47,http://www.histomap.ar/histoteca/Mano_Fetal_Osificacion_HE.htm,Osificación endocondral,Hematoxilina y Eosina,Sistema osteomuscular
+48,http://www.histomap.ar/histoteca/Osificacion_intramembranosa_HE.htm,Osificación intramembranosa,Hematoxilina y Eosina,Sistema osteomuscular
+49,http://www.histomap.ar/histoteca/Ovario_HE.htm,Ovario,Hematoxilina y Eosina,Sistema genital femenino
+50,http://www.histomap.ar/histoteca/Ovario_HE_2.htm,Ovario,Hematoxilina y Eosina,Sistema genital femenino
+51,http://www.histomap.ar/histoteca/Ovario_postmenopausico_HE.htm,Ovario (postmenopausico),Hematoxilina y Eosina,Sistema genital femenino
+52,http://www.histomap.ar/histoteca/Pancreas_HE.htm,Páncreas,Hematoxilina y Eosina,Sistema digestivo
+53,http://www.histomap.ar/histoteca/PVN_HE.htm,Paquete vasculonervioso,Hematoxilina y Eosina,Sistema cardiovascular
+54,http://www.histomap.ar/histoteca/Paratiroides_HE.htm,Paratiroides,Hematoxilina y Eosina,Sistema endocrino
+55,http://www.histomap.ar/histoteca/Piel_fina_HE.htm,Piel fina,Hematoxilina y Eosina,Piel y faneras
+56,http://www.histomap.ar/histoteca/Piel_gruesa_HE.htm,Piel gruesa,Hematoxilina y Eosina,Piel y faneras
+57,http://www.histomap.ar/histoteca/Pineal_HE.htm,Pineal,Hematoxilina y Eosina,Sistema nervioso
+58,http://www.histomap.ar/histoteca/Placenta_HE.htm,Placenta,Hematoxilina y Eosina,"Embrión, placenta y anexos"
+59,http://www.histomap.ar/histoteca/Prostata_HE.htm,Próstata,Hematoxilina y Eosina,Sistema genital masculino
+60,http://www.histomap.ar/histoteca/Pulmon_HE.htm,Pulmón,Hematoxilina y Eosina,Sistema respiratorio
+61,http://www.histomap.ar/histoteca/Pulmon_HE_2.htm,Pulmón,Hematoxilina y Eosina,Sistema respiratorio
+62,http://www.histomap.ar/histoteca/Raquis_HE.htm,Raquis,Hematoxilina y Eosina,Sistema nervioso
+63,http://www.histomap.ar/histoteca/Raquis_HE_2.htm,Raquis,Hematoxilina y Eosina,Sistema nervioso
+64,http://www.histomap.ar/histoteca/Raton_Joven_Tricromico.htm,Ratón neonato (corte sagital),Tricrómico de Masson,"Embrión, placenta y anexos"
+65,http://www.histomap.ar/histoteca/Rinion_HE.htm,Riñón,Hematoxilina y Eosina,Sistema urinario
+66,http://www.histomap.ar/histoteca/Sangre_MGG.htm,Sangre,May-Grünwald Giemsa,Sangre y médula ósea
+67,http://www.histomap.ar/histoteca/Tendon_HE.htm,Tendón,Hematoxilina y Eosina,Sistema osteomuscular
+68,http://www.histomap.ar/histoteca/Testiculo_HE.htm,Testículo,Hematoxilina y Eosina,Sistema genital masculino
+69,http://www.histomap.ar/histoteca/Timo_HE.htm,Timo,Hematoxilina y Eosina,Sistema inmune
+70,http://www.histomap.ar/histoteca/Tiroides_HE.htm,Tiroides,Hematoxilina y Eosina,Sistema endocrino
+71,http://www.histomap.ar/histoteca/Tiroides_Timo_HE.htm,Tiroides y timo,Hematoxilina y Eosina,Sistema endocrino
+72,http://www.histomap.ar/histoteca/Traquea_HE.htm,Tráquea,Hematoxilina y Eosina,Sistema respiratorio
+73,http://www.histomap.ar/histoteca/Trompa_uterina_HE.htm,Trompa uterina,Hematoxilina y Eosina,Sistema genital femenino
+74,http://www.histomap.ar/histoteca/Ureter_HE.htm,Uréter,Hematoxilina y Eosina,Sistema urinario
+75,http://www.histomap.ar/histoteca/Utero_proliferativa_HE.htm,Útero (fase proliferativa),Hematoxilina y Eosina,Sistema genital femenino
+76,http://www.histomap.ar/histoteca/Utero_secretora_HE.htm,Útero (fase secretora),Hematoxilina y Eosina,Sistema genital femenino
+77,http://www.histomap.ar/histoteca/Vejiga_HE.htm,Vejiga,Hematoxilina y Eosina,Sistema urinario
+78,http://www.histomap.ar/histoteca/Vesicula_biliar_HE.htm,Vesícula biliar,Hematoxilina y Eosina,Sistema digestivo
+79,http://www.histomap.ar/histoteca/Vesicula_biliar_Higado_HE.htm,Vesícula biliar e hígado,Hematoxilina y Eosina,Sistema digestivo
+80,http://www.histomap.ar/histoteca/Vesicula_seminal_HE.htm,Vesícula seminal,Hematoxilina y Eosina,Sistema genital masculino

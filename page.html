@@ -1,0 +1,823 @@
+<html xml:lang="es" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+    <meta charset="UTF-8"> <!-- Meta para caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Meta para adaptar pantalla a dispositivos móviles -->
+    <title>Histomap.ar - Microscopio virtual</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google tag (gtag.js) -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-035RP4KLZX"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-035RP4KLZX');
+    </script>
+    <script src="script-main.js"></script> <!-- Script para el buscador -->
+	</head>
+
+  <body>
+    <header>
+      <div class="banner"><a href="http://histomap.ar/"><img src="Imagenes/banner_histomapar.png" alt="Logo Histomap" width="100%"></a></div>
+      <nav class="navegador">
+        <a href="http://histomap.ar/" class="itemNavegador">Página principal</a>
+        <a href="http://histomap.ar/slides.htm" class="itemNavegador">Preparados</a>
+        <a href="http://histomap.ar/actividades.htm" class="itemNavegador">Actividades</a>
+        <a href="http://histomap.ar/info.htm" class="itemNavegador">Sobre nosotros</a>
+        <a href="http://histomap.ar/copyright.htm" class="itemNavegador">Derechos de autor</a>
+      </nav>
+    </header>
+    <main>
+      <div class="filtros">
+        <p>Para filtrar por sistema de órganos, elija el sistema que desea visualizar</p>
+        <select id="filtroSistema">
+          <option value="">Todos los sistemas</option>
+          <option value="sistemaCardio">Cardiovascular</option>
+          <option value="sistemaDig">Digestivo</option>
+          <option value="sistemaEndo">Endocrino</option>
+          <option value="embrion">Embrión, placenta y anexos</option>
+          <option value="sistemaFem">Genital femenino</option>
+          <option value="sistemaMasc">Genital masculino</option>
+          <option value="sistemaInmune">Inmune</option>
+          <option value="sistemaNerv">Nervioso</option>
+          <option value="sentidos">Órganos de los sentidos</option>
+          <option value="sistemaOsteo">Osteomuscular</option>
+          <option value="sistemaPiel">Piel y faneras</option>
+          <option value="sistemaRespi">Respiratorio</option>
+          <option value="sangre">Sangre y médula ósea</option>
+          <option value="sistemaUrinario">Urinario</option>
+        </select>
+      </div>
+      <div class="buscador">
+        <p>Escriba el nombre del órgano, sistema de órganos o tipo de tinción que desee visualizar:</p>
+        <input type="text" id="busqueda" placeholder="Buscar preparados..."><br>
+        <button id="botonBuscar">Buscar</button> <button id="botonBorrar">Borrar</button>
+      </div>
+      <div class="listaPrep">
+        <ul id="lista">
+            
+          <li class="preparado" data-sistema="sistemaEndo">
+            <a href="http://www.histomap.ar/histoteca/Adrenal_HE.htm" target="_blank">
+              <div class="datosPrep">
+                <p class="nombrePrep">Adrenal (glándula suprarrenal)</p>
+                <p class="descPrep">Hematoxilina y Eosina</p>
+                <p class="temaPrep">Sistema endocrino</p>
+              </div>
+            </a>
+          </li>
+          <li class="preparado" data-sistema="sistemaEndo">
+            <a href="http://www.histomap.ar/histoteca/Adrenal_HE_2.htm" target="_blank">
+              <div class="datosPrep">
+                <p class="nombrePrep">Adrenal (glándula suprarrenal)</p>
+                <p class="descPrep">Hematoxilina y Eosina</p>
+                <p class="temaPrep">Sistema endocrino</p>
+              </div>
+            </a>
+          </li>
+          <li class="preparado" data-sistema="sistemaInmune">
+                <a href="http://www.histomap.ar/histoteca/Amigdala_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Amígdala palatina</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema inmune</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaCardio">
+                <a href="http://www.histomap.ar/histoteca/Aorta_Cava_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Aorta y vena cava</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema cardiovascular</p>
+                  </div>
+                </a>
+              </li>
+              
+              <!-- AORTA VERHOEFF - Oculta. Irá a tinciones especiales
+              <li class="preparado" data-sistema="sistemaCardio">
+                <a href="http://www.histomap.ar/histoteca/Aorta_Verhoeff.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Aorta</p>
+                    <p class="descPrep">Tinción de Verhoeff</p>
+                    <p class="temaPrep">Sistema cardiovascular</p>
+                  </div>
+                </a>
+                -->
+              
+              <li class="preparado" data-sistema="sistemaInmune">
+                <a href="http://www.histomap.ar/histoteca/Bazo_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Bazo</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema inmune</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaInmune">
+                <a href="http://www.histomap.ar/histoteca/Bazo_HE_2.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Bazo</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema inmune</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaNerv">
+                <a href="http://www.histomap.ar/histoteca/Cerebelo_Cajal.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Cerebelo</p>
+                    <p class="descPrep">Técnica de Cajal</p>
+                    <p class="temaPrep">Sistema nervioso</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaNerv">
+                <a href="http://www.histomap.ar/histoteca/Cerebelo_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Cerebelo</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema nervioso</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaNerv">
+                <a href="http://www.histomap.ar/histoteca/Cerebelo_con_TE_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Cerebelo y tronco encefálico</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema nervioso</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaNerv">
+                <a href="http://www.histomap.ar/histoteca/Cerebro_Cajal.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Cerebro</p>
+                    <p class="descPrep">Técnica de Cajal</p>
+                    <p class="temaPrep">Sistema nervioso</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaNerv">
+                <a href="http://www.histomap.ar/histoteca/Cerebro_Cajal_2.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Cerebro</p>
+                    <p class="descPrep">Técnica de Cajal</p>
+                    <p class="temaPrep">Sistema nervioso</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaMasc">
+                <a href="http://www.histomap.ar/histoteca/Conducto_deferente_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Conducto deferente</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema genital masculino</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaCardio">
+                <a href="http://www.histomap.ar/histoteca/Corazon_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Corazón</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema cardiovascular</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="embrion">
+                <a href="http://www.histomap.ar/histoteca/Cordon_umbilical_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Cordón umbilical</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Embrión, placenta y anexos</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaFem">
+                <a href="http://www.histomap.ar/histoteca/Cuello_uterino_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Cuello uterino</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema genital femenino</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaFem">
+                <a href="http://www.histomap.ar/histoteca/Citologia_exfoliativa_PAP.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Cuello uterino (citología exfoliativa)</p>
+                    <p class="descPrep">Papanicolau</p>
+                    <p class="temaPrep">Sistema genital femenino</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaMasc">
+                <a href="http://www.histomap.ar/histoteca/Epididimo_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Epidídimo</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema genital masculino</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaDig">
+                <a href="http://www.histomap.ar/histoteca/Esofago_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Esófago</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema digestivo</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaDig">
+                <a href="http://www.histomap.ar/histoteca/Esofago_HE_2.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Esófago</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema digestivo</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaDig">
+                <a href="http://www.histomap.ar/histoteca/Estomago_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Estómago</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema digestivo</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaInmune">
+                <a href="http://www.histomap.ar/histoteca/Ganglio_linfatico_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Ganglio linfático</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema inmune</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaPiel">
+                <a href="http://www.histomap.ar/histoteca/Glandula_mamaria_embarazo_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Glándula mamaria (en embarazo)</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Piel y faneras</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaPiel">
+                <a href="http://www.histomap.ar/histoteca/Glandula_mamaria_embarazo_HE_2.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Glándula mamaria (en embarazo)</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Piel y faneras</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaPiel">
+                <a href="http://www.histomap.ar/histoteca/Glandula_mamaria_lactancia_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Glándula mamaria (en lactancia)</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Piel y faneras</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaPiel">
+                <a href="http://www.histomap.ar/histoteca/Glandula_mamaria_reposo_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Glándula mamaria (en reposo)</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Piel y faneras</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaDig">
+                <a href="http://www.histomap.ar/histoteca/Sublingual_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Glándula sublingual</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema digestivo</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaDig">
+                <a href="http://www.histomap.ar/histoteca/Submaxilar_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Glándula submandibular (submaxilar)</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema digestivo</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaDig">
+                <a href="http://www.histomap.ar/histoteca/Higado_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Hígado</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema digestivo</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaDig">
+                <a href="http://www.histomap.ar/histoteca/Higado_HE_2.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Hígado</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema digestivo</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaEndo">
+                <a href="http://www.histomap.ar/histoteca/Hipofisis_Tricromico.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Hipófisis</p>
+                    <p class="descPrep">Tricrómico</p>
+                    <p class="temaPrep">Sistema endocrino</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaEndo">
+                <a href="http://www.histomap.ar/histoteca/Hipofisis_Tetracromico_de_Herlant.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Hipófisis</p>
+                    <p class="descPrep">Tetracrómico de Herlant</p>
+                    <p class="temaPrep">Sistema endocrino</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaDig">
+                <a href="http://www.histomap.ar/histoteca/Apendice_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Intestino grueso (apéndice)</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema digestivo</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaDig">
+                <a href="http://www.histomap.ar/histoteca/Colon_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Intestino grueso (colon)</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema digestivo</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaDig">
+                <a href="http://www.histomap.ar/histoteca/Colon_HE_2.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Intestino grueso (colon)</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema digestivo</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaDig">
+                <a href="http://www.histomap.ar/histoteca/Duodeno_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Intestino delgado (duodeno)</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema digestivo</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaDig">
+                <a href="http://www.histomap.ar/histoteca/Ileon_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Intestino delgado (íleon)</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema digestivo</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaDig">
+                <a href="http://www.histomap.ar/histoteca/Yeyuno_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Intestino delgado (yeyuno)</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema digestivo</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaDig">
+                <a href="http://www.histomap.ar/histoteca/Lengua_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Lengua</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema digestivo</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaNerv">
+                <a href="http://www.histomap.ar/histoteca/Medula_espinal_Cajal.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Médula espinal</p>
+                    <p class="descPrep">Técnica de Cajal</p>
+                    <p class="temaPrep">Sistema nervioso</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaNerv">
+                <a href="http://www.histomap.ar/histoteca/Medula_espinal_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Médula espinal</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema nervioso</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sangre">
+                <a href="http://www.histomap.ar/histoteca/Medula_osea_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Médula ósea</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sangre y médula ósea</p>
+                  </div>
+                </a>
+              </li>
+              <!-- NERVIO OSMIO - Oculto. Irá a ESTRUCTURAS
+              <li class="preparado" data-sistema="sistemaNerv">
+                <a href="http://www.histomap.ar/histoteca/Nervio_Tetroxido_de_osmio.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Nervio periférico</p>
+                    <p class="descPrep">Tetróxido de osmio</p>
+                    <p class="temaPrep">Sistema nervioso</p>
+                  </div>
+                </a>
+              -->
+              
+              <li class="preparado" data-sistema="sentidos">
+                <a href="http://www.histomap.ar/histoteca/Oido_interno_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Oído interno</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Órganos de los sentidos</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sentidos">
+                <a href="http://www.histomap.ar/histoteca/Ojo_anterior_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Ojo (segmento anterior)</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Órganos de los sentidos</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sentidos">
+                <a href="http://www.histomap.ar/histoteca/Ojo_anterior_HE_2.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Ojo (segmento anterior)</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Órganos de los sentidos</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sentidos">
+                <a href="http://www.histomap.ar/histoteca/Ojo_posterior_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Ojo (segmento posterior)</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Órganos de los sentidos</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaOsteo">
+                <a href="http://www.histomap.ar/histoteca/Osificacion_endocondral_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Osificación endocondral</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema osteomuscular</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaOsteo">
+                <a href="http://www.histomap.ar/histoteca/Osificacion_endocondral_HE_2.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Osificación endocondral</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema osteomuscular</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaOsteo">
+                <a href="http://www.histomap.ar/histoteca/Mano_Fetal_Osificacion_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Osificación endocondral</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema osteomuscular</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaOsteo">
+                <a href="http://www.histomap.ar/histoteca/Osificacion_intramembranosa_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Osificación intramembranosa</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema osteomuscular</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaFem">
+                <a href="http://www.histomap.ar/histoteca/Ovario_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Ovario</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema genital femenino</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaFem">
+                <a href="http://www.histomap.ar/histoteca/Ovario_HE_2.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Ovario</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema genital femenino</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaFem">
+                <a href="http://www.histomap.ar/histoteca/Ovario_postmenopausico_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Ovario (postmenopausico)</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema genital femenino</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaDig">
+                <a href="http://www.histomap.ar/histoteca/Pancreas_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Páncreas</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema digestivo</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaCardio">
+                <a href="http://www.histomap.ar/histoteca/PVN_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Paquete vasculonervioso</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema cardiovascular</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaEndo">
+                <a href="http://www.histomap.ar/histoteca/Paratiroides_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Paratiroides</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema endocrino</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaPiel">
+                <a href="http://www.histomap.ar/histoteca/Piel_fina_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Piel fina</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Piel y faneras</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaPiel">
+                <a href="http://www.histomap.ar/histoteca/Piel_gruesa_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Piel gruesa</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Piel y faneras</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaNerv">
+                <a href="http://www.histomap.ar/histoteca/Pineal_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Pineal</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema nervioso</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="embrion">
+                <a href="http://www.histomap.ar/histoteca/Placenta_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Placenta</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Embrión, placenta y anexos</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaMasc">
+                <a href="http://www.histomap.ar/histoteca/Prostata_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Próstata</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema genital masculino</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaRespi">
+                <a href="http://www.histomap.ar/histoteca/Pulmon_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Pulmón</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema respiratorio</p>
+                  </div>
+                </a>
+              </li>
+               <li class="preparado" data-sistema="sistemaRespi">
+                <a href="http://www.histomap.ar/histoteca/Pulmon_HE_2.htm" target="_blank">  
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Pulmón</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema respiratorio</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaNerv">
+                <a href="http://www.histomap.ar/histoteca/Raquis_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Raquis</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema nervioso</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaNerv">
+                <a href="http://www.histomap.ar/histoteca/Raquis_HE_2.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Raquis</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema nervioso</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="embrion">
+                <a href="http://www.histomap.ar/histoteca/Raton_Joven_Tricromico.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Ratón neonato (corte sagital)</p>
+                    <p class="descPrep">Tricrómico de Masson</p>
+                    <p class="temaPrep">Embrión, placenta y anexos</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaUrinario">
+                <a href="http://www.histomap.ar/histoteca/Rinion_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Riñón</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema urinario</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sangre">
+                <a href="http://www.histomap.ar/histoteca/Sangre_MGG.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Sangre</p>
+                    <p class="descPrep">May-Grünwald Giemsa</p>
+                    <p class="temaPrep">Sangre y médula ósea</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaOsteo">
+                <a href="http://www.histomap.ar/histoteca/Tendon_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Tendón</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema osteomuscular</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaMasc">
+                <a href="http://www.histomap.ar/histoteca/Testiculo_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Testículo</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema genital masculino</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaInmune">
+                <a href="http://www.histomap.ar/histoteca/Timo_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Timo</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema inmune</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaEndo">
+                <a href="http://www.histomap.ar/histoteca/Tiroides_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Tiroides</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema endocrino</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaEndo">
+                <a href="http://www.histomap.ar/histoteca/Tiroides_Timo_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Tiroides y timo</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema endocrino</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaRespi">
+                <a href="http://www.histomap.ar/histoteca/Traquea_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Tráquea</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema respiratorio</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaFem">
+                <a href="http://www.histomap.ar/histoteca/Trompa_uterina_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Trompa uterina</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema genital femenino</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaUrinario">
+                <a href="http://www.histomap.ar/histoteca/Ureter_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Uréter</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema urinario</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaFem">
+                <a href="http://www.histomap.ar/histoteca/Utero_proliferativa_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Útero (fase proliferativa)</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema genital femenino</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaFem">
+                <a href="http://www.histomap.ar/histoteca/Utero_secretora_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Útero (fase secretora)</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema genital femenino</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaUrinario">
+                <a href="http://www.histomap.ar/histoteca/Vejiga_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Vejiga</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema urinario</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaDig">
+                <a href="http://www.histomap.ar/histoteca/Vesicula_biliar_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Vesícula biliar</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema digestivo</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaDig">
+                <a href="http://www.histomap.ar/histoteca/Vesicula_biliar_Higado_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Vesícula biliar e hígado</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema digestivo</p>
+                  </div>
+                </a>
+              </li>
+              <li class="preparado" data-sistema="sistemaMasc">
+                <a href="http://www.histomap.ar/histoteca/Vesicula_seminal_HE.htm" target="_blank">
+                  <div class="datosPrep">
+                    <p class="nombrePrep">Vesícula seminal</p>
+                    <p class="descPrep">Hematoxilina y Eosina</p>
+                    <p class="temaPrep">Sistema genital masculino</p>
+                  </div>
+                </a>
+              </li>
+        </ul>
+      </div>
+    </main>
+    <footer>
+      <nav class="socialLinks">
+        <a target="_blank" rel="noopener" href="https://fmed.uba.ar/departamentos_y_catedras/unidad-academica-de-histologia/informacion-general"><img src="Imagenes/Fmed footer.png" alt="Facultad de Medicina" class="footerItem"></a>
+        <a target="_blank" rel="noopener" href="https://www.instagram.com/histomap.ar/"><img src="Imagenes/Instagram.png" alt="Instagram" class="footerItem"></a>
+      </nav>
+      <p>Contacto: contacto@histomap.ar</p>
+      <p style="font-size: smaller;">Obra registrada ® 2024. Berensztein E.B. y colaboradores. Todos los derechos reservados</p>
+    </footer>
+  
+	
+
+</body></html>
